@@ -112,6 +112,10 @@ add_executable(listener  src/listener.cpp)
 add_dependencies(listener  saas_tutorial_generate_messages_cpp)
 target_link_libraries(listener  ${catkin_LIBRARIES})
 
+add_executable(simulator src/simulator.cpp include/simulator.h)
+add_dependencies(simulator saas_tutorial_generate_messages_cpp)
+target_link_libraries(simulator ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
